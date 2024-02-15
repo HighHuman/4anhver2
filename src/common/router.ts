@@ -62,7 +62,7 @@ const router = createRouter({
   routes,
 });
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, next) => {
   if (to.meta.requiresAuth) {
     if (isLoggedIn()) {
       next();
